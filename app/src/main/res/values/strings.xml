@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My AL-Qur\'an</string>
+    <string name="Ayat">Ayat</string>
+    <string name="jadwal_sholat">Jadwal Sholat</string>
+    <string name="al_quran">Al-Quran</string>
+    <string name="masque">Masjid</string>
+
+    <string name="loading">Memuat Data...</string>
+</resources>
