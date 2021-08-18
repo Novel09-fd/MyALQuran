@@ -1,6 +1,7 @@
-package com.novel.myal_quran.entity;
+package com.novel.myal_quran.entity.indonesia;
 
 import com.google.gson.annotations.SerializedName;
+import com.novel.myal_quran.entity.Surah;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class IndonesiaResponse {
     private int code;
 
     @SerializedName("data")
-    private List<Surah> data;
+    private List<SurahIndonesia> data;
 
     @SerializedName("status")
     private String status;
@@ -23,11 +24,11 @@ public class IndonesiaResponse {
         return code;
     }
 
-    public void setData(List<Surah> data){
+    public void setData(List<SurahIndonesia> data){
         this.data = data;
     }
 
-    public List<Surah> getData(){
+    public List<SurahIndonesia> getData(){
         return data;
     }
 

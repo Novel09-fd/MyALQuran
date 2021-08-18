@@ -5,20 +5,28 @@ import com.google.gson.annotations.SerializedName;
 public class Ayat {
     @SerializedName("number")
     private int number;
+
     @SerializedName("text")
     private String text;
+
     @SerializedName("numberInSurah")
     private int numberInSurah;
+
     @SerializedName("juz")
     private int juz;
+
     @SerializedName("manzil")
     private int manzil;
+
     @SerializedName("page")
     private int page;
+
     @SerializedName("ruku")
     private int ruku;
+
     @SerializedName("hizbQuarter")
     private int hizbQuarter;
+
     @SerializedName("sajda")
     private boolean sajda;
 

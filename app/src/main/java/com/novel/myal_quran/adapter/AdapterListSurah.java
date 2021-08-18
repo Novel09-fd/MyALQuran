@@ -1,6 +1,7 @@
 package com.novel.myal_quran.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.novel.myal_quran.DetailAyat;
 import com.novel.myal_quran.R;
 import com.novel.myal_quran.entity.Surah;
 
@@ -33,13 +35,23 @@ public class AdapterListSurah extends RecyclerView.Adapter<AdapterListSurah.Sura
     }
 
     @Override
-    public void onBindViewHolder(@NonNull SurahHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SurahHolder holder, final int position) {
 
         final Surah dataSurah = list.get(position);
         holder.tv_namaSurah.setText(dataSurah.getEnglishName());
         holder.tv_terjemahan.setText(dataSurah.getEnglishNameTranslation());
         holder.tv_jumlahAyat.setText(String.valueOf(dataSurah.getNumberOfAyahs()));
         holder.tv_numberSurah.setText(String.valueOf(dataSurah.getNumber()));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Surah surah = list.get(position);
+                Intent intent = new Intent(holder.itemView.getContext(), DetailAyat.class);
+                intent.putExtra("detailAyat" , dataSurah.getNumber());
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
 
     }
 

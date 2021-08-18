@@ -1,6 +1,6 @@
 package com.novel.myal_quran.services;
 
-import com.novel.myal_quran.entity.IndonesiaResponse;
+import com.novel.myal_quran.entity.indonesia.IndonesiaResponse;
 import com.novel.myal_quran.entity.QuranResponse;
 
 import retrofit2.Call;
